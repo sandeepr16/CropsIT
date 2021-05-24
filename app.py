@@ -140,12 +140,15 @@ def predict():
             na1 = data.val()[person["uid"]]["name"]
             sendernumber = ''
             sendernumber = str("+91")+str(person["num"])
-            message = client.messages.create(
-                body='Hi' + str(person['name'])+' Cropname : ' +
-                str(crop_name)+' Fertilisername : ' + str(y),
-                from_='+14803861247',
-                to=sendernumber
-            )
+            try:
+                message = client.messages.create(
+                    body='Hi' + str(person['name'])+' Cropname : ' +
+                    str(crop_name)+' Fertilisername : ' + str(y),
+                    from_='+14803861247',
+                    to=sendernumber
+                )
+            except:
+                pass
             # print(message.sid)
             doc = docx.Document("crops/"+str(crop_name)+".docx")
             all_paras = doc.paragraphs
