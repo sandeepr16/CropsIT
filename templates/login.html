@@ -1,0 +1,99 @@
+<html>
+    <head>
+      <title>CropsIT</title>
+ 
+      <div class="container mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+  <img src="/static/img/logo.png" style="margin-left: 44%;" width="200px" height="200px">
+ 
+  <div class="flex mx-auto border-2 border-green-500 rounded overflow-hidden mt-6" style="margin-right: 24%;">
+    <a href="{{url_for('login')}}" style="border-color: green" class="py-1 px-4 bg-green-500 text-white " role="button">Sign In</a>
+    <a href="{{ url_for('signup')}}" class="py-1 px-4 focus:outline-none" role="button">Sign Up</a>
+  </div>
+  </div>
+  </div>
+        <link href="https://unpkg.com/tailwindcss@%5E2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    
+    <body >
+<section class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap items-center"> 
+      <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0" style="margin-left: 62;">
+        <h1 class="title-font font-medium text-3xl text-gray-900">Portable Soil Analysis and Crop Suggestion System<br></h1>
+        <p class="leading-relaxed mt-4"> 
+          <span class="bg-green-100 text-green-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5"></path>
+          </svg>
+        </span>
+        Measures the amount of macronutrients and other factors that effect the soil quality.<br><br>
+        
+        <span class="bg-green-100 text-green-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5"></path>
+          </svg>
+        </span>Analyses the collected information using appropriate Machine Learning techniques.<br><br>
+        
+        <span class="bg-green-100 text-green-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5"></path>
+          </svg>
+        </span>Suggests the farmer with the crop varieties suitable for that land.<br><br>
+        
+        <span class="bg-green-100 text-green-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5"></path>
+          </svg>
+        </span>Provides information regarding the right fertilizer that is to be used. 
+    <br><br> 
+
+    <span class="bg-green-100 text-green-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+        <path d="M20 6L9 17l-5-5"></path>
+      </svg>
+    </span>Provides the retail information about the Fertilizer. <br><br>
+
+    <span class="bg-green-100 text-green-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+        <path d="M20 6L9 17l-5-5"></path>
+      </svg>
+    </span>Provides the information about crop cultivation.<br><br>
+    
+    <span class="bg-green-100 text-green-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+        <path d="M20 6L9 17l-5-5"></path>
+      </svg>
+    </span>Conveys the required data to the farmer using a message service platform. <br><br>
+
+  
+  </p>
+      </div>
+     
+      <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0" style="margin-left: 6;">
+        <div class="fadeIn first">
+          <img src="/static/img/user.png" id="icon" alt="User Icon" width="50px" height="50px" />
+        </div>
+    
+        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Sign In</h2>
+        <form action="{{ url_for('result')}}" method="POST">
+        <div class="relative mb-4">
+         
+          <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+        
+        <input type="email" id="login" name="email" placeholder="Email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+       
+      </div>
+      <div class="relative md-4">
+        <label for="email" class="leading-7 text-sm text-gray-600">Password</label>
+        <input type="password" id="password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" name="pass" placeholder="Password">
+      </div>
+
+      <br>
+      <button style="background-color: #40cf98;color: white;padding:8px;" class="text-white focus:outline-none hover:bg-indigo-600 rounded text-lg">Sign In</button>
+     
+      </div>
+    </form>
+    </div>
+  </section>
+  </body>
+  </html>

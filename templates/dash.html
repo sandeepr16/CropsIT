@@ -1,0 +1,145 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+  <!-- css -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="static/css/bootstrap.css" rel="stylesheet" />
+  <link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+  <link href="static/css/jcarousel.css" rel="stylesheet" />
+  <link href="static/css/flexslider.css" rel="stylesheet" />
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- Theme skin -->
+  <link href="static/skins/default.css" rel="stylesheet" />
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="static/ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="static/ico/favicon.png" />
+</head>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="{{ url_for('static', filename = 'img/logo.png') }}" id="icon" alt="User Icon" width="140px" height="140px"/>
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl"></span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900" href="{{ url_for('home')}}" style="color: green;"><b>HOME</b></a>
+        <a class="mr-5 hover:text-gray-900" href="home#about"><b>ABOUT</b></a>
+  <a class="mr-5 hover:text-gray-900" href="{{ url_for('dashboard')}}" ><b>DASHBOARD</b></a>
+        <a class="mr-5 hover:text-gray-900" href="home#content"><b>RELATED ARTICLES</b></a>
+        <a class="mr-5 hover:text-gray-900" href="home#guide"><b>GUIDE</b></a>
+        <a class="mr-5 hover:text-gray-900" href="{{ url_for('se')}}" ><b>SEARCH</b></a>
+        <a class="mr-5 hover:text-gray-900" href="{{ url_for('fertiliser')}}" ><b>FERTILIZERS</b></a>
+      </nav>
+        
+    </div>
+
+<link href="https://unpkg.com/tailwindcss@%5E2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="static/ico/favicon.png" />
+
+    <body>
+   <hr>
+	<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="text-center mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4" ><b style="background-color: cornsilk;">Your Crop Suggestions</b></h1>
+      <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto"><u>Here are your Previous and Current logs of Crop Suggestions</u></p>
+    </div>
+
+    <div class="flex flex-wrap -m-4">
+	{% for h in heading %}
+    <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+        
+        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
+        
+	
+        
+<b style="color: green;font-size: 20px;">
+
+
+            {{ h }} 
+       
+</b>
+    <br>
+		  
+        </nav>
+      </div>
+      
+	{% endfor %}
+  
+	</div>
+  <hr><br><br>
+	{% for q in answer %}
+    <div class="flex flex-wrap -m-4">
+	
+	{% for k,v in q.items() %}
+      <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+        
+        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
+          
+		  <a>
+            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>{{ v }}
+          </a>
+		  <hr>
+        </nav>
+      </div>
+	  {% endfor %}
+    </div>
+	{% endfor %}
+   
+  </div>
+</section>
+<div id="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="span6">
+        <div class="copyright">
+         
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Flattern
+            -->
+           <h5 style="color: white;"><b>CropsIT</b></h5>
+           <h6 style="font-size: 18px;color: green;"> Portable Soil Analysis and Crop Suggestion System</h6><p style="color: white;">CropsIT is an easily operable kiosk which senses the soil nutrient components and analyses the values obtained to provide a detailed report, along with crop suggestions suitable for the soil, instantaneously through a message service.The salient features of the model are Instantaneous analysis, suitable crops and estimated yield, suitable fertilizer to maintain fertility and effective communication through text.</p>
+          </div>
+        </div>
+      </div>
+    <div class="span3"> 
+      <p style="color: white;"><br><br>K Tharun Kumar Reddy <a href="mailto:17311A1961@gmail.com" >Mail</a><br>Y Rasagna <a href="mailto:17311A1964@sreenidhi.edu.in">Mail</a><br>R Sandeep<a href="mailto:17311A1966@sreenidhi.edu.in"> Mail</a>
+      </p>
+
+    </div>
+      <div class="span4">
+        <img src="static/img/logo.png" width="125px" height="125px" style="margin-left: 130%;">
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+</div>
+
+    </body>
+</html>

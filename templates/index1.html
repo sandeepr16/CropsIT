@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+  <!-- css -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="static/css/bootstrap.css" rel="stylesheet" />
+  <link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+  <link href="static/css/jcarousel.css" rel="stylesheet" />
+  <link href="static/css/flexslider.css" rel="stylesheet" />
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- Theme skin -->
+  <link href="static/skins/default.css" rel="stylesheet" />
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="static/ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="static/ico/favicon.png" />
+
+</head>
+
+<body>
+ 
+    <!-- end toggle top area -->
+    <!-- start header -->
+    <header>
+      <div class="container ">
+        <!-- hidden top area toggle link -->
+        
+        <!-- end toggle link -->
+        <div class="row nomargin">
+          <div class="span12">
+            <div class="headnav">
+             
+            </div>
+            <!-- Signup Modal -->
+            <div id="mySignup" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySignupModalLabel" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 id="mySignupModalLabel">Create an <strong>account</strong></h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <div class="control-group">
+                    <label class="control-label" for="inputEmail">Email</label>
+                    <div class="controls">
+                      <input type="text" id="inputEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputSignupPassword">Password</label>
+                    <div class="controls">
+                      <input type="password" id="inputSignupPassword" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputSignupPassword2">Confirm Password</label>
+                    <div class="controls">
+                      <input type="password" id="inputSignupPassword2" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                      <button type="submit" class="btn">Sign up</button>
+                    </div>
+                    <p class="aligncenter margintop20">
+                      Already have an account? <a href="#mySignin" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Sign in</a>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- end signup modal -->
+            <!-- Sign in Modal -->
+            <div id="mySignin" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 id="mySigninModalLabel">Login to your <strong>account</strong></h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <div class="control-group">
+                    <label class="control-label" for="inputText">Username</label>
+                    <div class="controls">
+                      <input type="text" id="inputText" placeholder="Username">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputSigninPassword">Password</label>
+                    <div class="controls">
+                      <input type="password" id="inputSigninPassword" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                      <button type="submit" class="btn">Sign in</button>
+                    </div>
+                    <p class="aligncenter margintop20">
+                      Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- end signin modal -->
+            <!-- Reset Modal -->
+            <div id="myReset" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="myResetModalLabel" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 id="myResetModalLabel">Reset your <strong>password</strong></h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <div class="control-group">
+                    <label class="control-label" for="inputResetEmail">Email</label>
+                    <div class="controls">
+                      <input type="text" id="inputResetEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                      <button type="submit" class="btn">Reset password</button>
+                    </div>
+                    <p class="aligncenter margintop20">
+                      We will send instructions on how to reset your password to your inbox
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- end reset modal -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="span3">
+           
+            <div class="logo">
+              <a href="index.html"><img src="static/img/logo.png" alt="" class="logo" width="120px" height="120px"/></a>
+           
+            </div> 
+     
+          </div>
+          <div class="span8">
+            <div class="navbar navbar-static-top">
+              <div class="navigation">
+                <nav>
+                  <ul class="nav topnav">
+                    <li class="dropdown active">
+                      <a href="#index.html">Home</a>
+                     
+                    </li>
+                    <li>
+                      <a href="#about"><b>ABOUT</b></a>
+                    </li>
+                    <li>
+                      <a href="#content"><b>RELATED ARTICLES</b></a>
+                    </li>
+                   
+                  
+                    <li>
+                      <a href="#guide"><b>GUIDE</b></a>
+                    </li>
+
+                    <li>
+                      <a href="{{url_for('se')}}"><b>SEARCH</b></a>
+                    </li>
+
+                    <li>
+                      <a href="{{url_for('fertiliser')}}"><b>FERTILIZERS</b></a>
+                    </li>
+                    <li>
+                      <a href="{{url_for('dashboard')}}"><b>DASHBOARD</b></a>
+                    </li>
+                    <li>
+                      <a><b>Hi {{na}} !</b></a>
+                    </li>
+                
+                   
+                  </ul>
+                </nav>
+              </div>
+              <!-- end navigation -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- end header -->
+    <section>
+      <!-- start slider -->
+      <!-- Slider -->
+      <div>
+        <div>
+          <!-- Slide #1 image -->
+          <img src="static/img/slides/nivo/bg-1.jpg" alt="" title="#caption-1" />
+         
+        </div>
+        <section class="content">
+        <div class="container">
+          <div class="row">
+        
+            
+          <h4 class="heading"><strong><br><br><br><br>Enter the Code & Select the type of Soil</strong></h4>
+                  
+                    <div class="form-group">
+                      <form action="{{ url_for('predict')}}" method="post" >
+                    
+                     
+                      <input type="tel" style="width: 380px;border-radius: 3px;border-color: green;padding:17px;" class="form-control" id="first" name="number" pattern="^\d{12}$"  required="required" placeholder="Code">
+                      <br><br>
+                      <select id="mySelect" name = "soiltype" placeholder ="Select the type of Soil">
+                        <option value="4">Red</option>
+                        <option value="3">Black</option>
+                        <option value="2">Loamy</option>
+                        <option value="5">Clayey</option>
+                        <option value="1">Sandy</option>
+                      </select>
+                      <input type="submit"  value="Go" style="background-color: green;color: white; border-radius: 5px;border-color: green;">
+                    </div>
+            
+
+
+</div>
+                 
+               
+
+                 
+
+
+              
+        </div>
+      </div>
+      <!-- end slider -->
+    </section>
+    <section class="callaction" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="big-cta">
+              <div class="cta-text">
+                <h4 class="heading"><strong>About Us</strong></h4>
+                <p class="text-justify" style="font-size: large;line-height: 0.8cm;">
+                  Farmers with low crop yield need instant soil quality report to cultivate suitable crops to increase crop production. Farmers often face certain issues since they are not used to the advancing technology. Also, soil testing laboratories take time to give the analysis report.
+                  This process is not instantaneous and is ineffective for day to day analysis. Our Solution is an easily operable kiosk which senses the soil nutrient components and analyses the values obtained to provide a detailed report, along with crop suggestions suitable for the soil, instantaneously through a message service.The salient features of the model are Instantaneous analysis, suitable crops and estimated yield, suitable fertilizer to maintain fertility and effective communication through messages. The device primarily measures the amount of macro nutrients present in the soil, collects the information regarding various parameters that effect the soil quality when required, analyses the collected information using appropriate data science techniques, suggests the farmer with the crop varieties suitable for that land, market demand is also taken into consideration while suggesting, provides information regarding the right fertilizer that is to be used, conveys the required data to the farmer using a message service platform. 
+                  
+                </p>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="content">
+     
+      <div class="container">
+        <h4 class="heading"><strong>Related Articles</strong></h4>
+        <div class="row">
+          <div class="span12">
+            <div class="row">
+              <div class="span3">
+                <div class="box aligncenter">
+                  <div class="aligncenter icon">
+                    <img src="static/img/icons/wheelbarrow.png" width="105px;" height="5px;">
+                  </div>
+               
+                  <div class="text">
+                    
+                    <h6>Soil Preparation</h6>
+                   
+                    <a href="https://agrilifeextension.tamu.edu/library/gardening/soil-preparation/#:~:text=Add%20organic%20matter%20each%20year,soil%20clean%20and%20level%20it."><b>Learn more</b></a>
+                  </div>
+                </div>
+              </div>
+              <div class="span3">
+                <div class="box aligncenter">
+                  <div class="aligncenter icon">
+                    <img src="static/img/icons/seeds.png" width="105px;" height="105px;">
+                  </div>
+                  <div class="text">
+                    <h6>Sowing</h6>
+                    
+                    <a href="https://byjus.com/biology/sowing/"><b>Learn more</b></a>
+                  </div>
+                </div>
+              </div>
+              <div class="span3">
+                <div class="box aligncenter">
+                  <div class="aligncenter icon">
+                    <img src="static/img/icons/pesticide.png" width="105px;" height="105px;">
+                  </div>
+                  <div class="text">
+                    <h6>Fertilizer Application</h6>
+                   
+                    <a href="https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/fertilizer-application"><b>Learn more</b></a>
+                  </div>
+                </div>
+              </div>
+              <div class="span3">
+                <div class="box aligncenter">
+                  <div class="aligncenter icon">
+                    <img src="static/img/icons/scythe.png" width="105px;" height="105px;">
+                  </div>
+                  <div class="text">
+                    <h6>Interculture Equipments</h6>
+                   
+                    <a href="https://aicrp.icar.gov.in/fim/salient-achievements/intercultural-and-fertilizer-application-equipments/"><b>Learn more</b></a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+        <section id="content">
+     
+          <div class="container">
+          
+            <div class="row">
+              <div class="span12">
+                <div class="row">
+                  <div class="span3">
+                    <div class="box aligncenter">
+                      <div class="aligncenter icon">
+                        <img src="static/img/icons/planting.png" width="105px;" height="105px;">
+                      </div>
+                   
+                      <div class="text">
+                        
+                        <h6>Plant Protection</h6>
+                       
+                        <a href="https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/plant-protection"><b>Learn more</b></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span3">
+                    <div class="box aligncenter">
+                      <div class="aligncenter icon">
+                        <img src="static/img/icons/harvest.png" width="105px;" height="105px;">
+                      </div>
+                      <div class="text">
+                        <h6>Harvesting</h6>
+                        
+                        <a href="http://www.knowledgebank.irri.org/step-by-step-production/postharvest/harvesting"><b>Learn more</b></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span3">
+                    <div class="box aligncenter">
+                      <div class="aligncenter icon">
+                        <img src="static/img/icons/seed1.png" width="105px;" height="105px;">
+                      </div>
+                      <div class="text">
+                        <h6>Soil Health</h6>
+                       
+                        <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/main/soils/health/"><b>Learn more</b></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span3">
+                    <div class="box aligncenter">
+                      <div class="aligncenter icon">
+                        <img src="static/img/icons/pest.png" width="105px;" height="105px;">
+                      </div>
+                      <div class="text">
+                        <h6>Disease and Symptoms</h6>
+                       
+                        <a href="https://www.planetnatural.com/pest-problem-solver/plant-disease/"><b>Learn more</b></a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </section>
+    
+    
+
+
+
+        
+
+
+        <!-- divider -->
+        <div class="row">
+          <div class="span12">
+            <div class="solidline">
+            </div>
+          </div>
+        </div>
+        <!-- end divider -->
+        <!-- Portfolio Projects -->
+        <section class="callaction" id="guide">
+          <div class="container">
+            <div class="row">
+              <div class="span12">
+                <div class="big-cta">
+                  <div class="cta-text">
+                    <h4 class="heading"><strong>GUIDE</strong></h4>
+                    <p class="text-justify" style="font-size: large;line-height: 0.8cm;">
+                      <a href="https://agricoop.nic.in/en/farmingagreement/farmers-welfare"><b>Farmers Welfare</b></a>
+
+                    <br>
+                    <br>
+                    <a href="http://www.fao.org/3/ax270e/ax270e.pdf"> <b>Best	Practice Guideline
+                      for	Agriculture	and	Value	Chains</b></a>
+                      <br><br>
+                      <a href="https://instr.iastate.libguides.com/agriculture"><b>Agriculture (Plants & Crops) Research Guide</b></a>
+  <br><br>
+                    </p>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+            </div>
+          </div>
+        </div>
+        <!-- End Portfolio Projects -->
+        <!-- divider -->
+      <footer>
+      <div id="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <div class="copyright">
+               
+                <div class="credits">
+                  <!--
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Flattern
+                  -->
+                 <h5 style="color: white;"><b>CropsIT</b></h5>
+                 <h6 style="font-size: 18px;color: green;"> Portable Soil Analysis and Crop Suggestion System</h6><p style="color: white;">CropsIT is an easily operable kiosk which senses the soil nutrient components and analyses the values obtained to provide a detailed report, along with crop suggestions suitable for the soil, instantaneously through a message service.The salient features of the model are Instantaneous analysis, suitable crops and estimated yield, suitable fertilizer to maintain fertility and effective communication through text.</p>
+                </div>
+              </div>
+            </div>
+          <div class="span3"> 
+            <p style="color: white;"><br><br>K Tharun Kumar Reddy <a href="mailto:17311A1961@gmail.com" >Mail</a><br>Y Rasagna <a href="mailto:17311A1964@sreenidhi.edu.in">Mail</a><br>R Sandeep<a href="mailto:17311A1966@sreenidhi.edu.in"> Mail</a>
+            </p>
+
+          </div>
+            <div class="span4">
+              <img src="static/img/logo.png" width="125px" height="125px" style="margin-left: 130%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jcarousel/jquery.jcarousel.min.js"></script>
+  <script src="js/jquery.fancybox.pack.js"></script>
+  <script src="js/jquery.fancybox-media.js"></script>
+  <script src="js/google-code-prettify/prettify.js"></script>
+  <script src="js/portfolio/jquery.quicksand.js"></script>
+  <script src="js/portfolio/setting.js"></script>
+  <script src="js/jquery.flexslider.js"></script>
+  <script src="js/jquery.nivo.slider.js"></script>
+  <script src="js/modernizr.custom.js"></script>
+  <script src="js/jquery.ba-cond.min.js"></script>
+  <script src="js/jquery.slitslider.js"></script>
+  <script src="js/animate.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="js/custom.js"></script>
+
+</body>
+</html>

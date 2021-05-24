@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ZaminDAR</title>
+<style>
+body{
+    background: whitesmoke;
+}
+.mobile{
+    position: absolute;
+    margin-left: 45%;
+    top:20%;
+}
+.frame{
+    box-shadow:3px 3px 4px 3px #222;
+    border-radius: 20%;
+    width:170px;
+    position: absolute;
+    height: 380px;
+    background: rgb(26, 25, 25);
+    box-shadow:0px -100px 500px 80px rgba(255,255,255,0.2),
+    0px -130px 800px 30px rgba(255,140,30,0.1),
+    inset 0px -11px 30px rgba(55,45,35,0.6),
+    inset 0px -7px 8px rgba(55,45,35,0.7),
+    inset 0px -1px 1px rgba(255,255,255,0.4),
+    inset 0px 20px 3px rgba(255,255,255,0.2),
+    0px 17px 27px rgba(0,0,0,0.7),
+    0px 4px 3px rgba(0,0,0,0.8),
+    -2px -2px 2px rgba(0,0,0,0.5),
+    inset 1px 1px 1px rgba(255,255,255,0.5),
+    inset 0px 2px 2px rgba(0,0,0,0.2),
+    inset 1px 0px 2px rgba(0,0,0,0.4),
+    inset -1px 0px 2px rgba(0,0,0,0.4);
+}
+.frame::after{
+    position: absolute;
+    content: "_";
+    top: -78px;
+    font-size: 5em;
+    left: 65px;
+    color:rgba(32, 32, 32, 0.7);
+}
+.inner-frame{
+    border-radius: 20%;
+    width: 150px;
+    left: 10px;
+    position: absolute;
+    height: 340px;
+    top: 30px;
+    background: rgb(29, 28, 28);
+}
+.inner-frame::after{
+    position: absolute;
+    content: "NOKIA";
+    top: -2px;
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 2px;
+    left: 51px;
+    color:gainsboro;
+    font-family: monospace;
+}
+.screen{
+    width:130px;
+    position: absolute;
+    height: 130px;
+    left: 10px;
+    top: 30px;
+    box-shadow: inset 2px 2px 2px #333;
+    background:linear-gradient(#333,#444);
+}
+.keypad{
+    width: 130px;
+    left: 10px;
+    position: absolute;
+    height: 150px;
+    top: 180px;
+    border-radius: 0 0 20% 20%;
+    background: rgb(29, 28, 28);
+    border: 1px solid rgb(24, 23, 23); 
+}
+.button-left{
+    position: absolute;
+}
+.minus-1{
+    background: rgb(29, 28, 28);
+    border: none;
+    color: whitesmoke;
+    font-size: 2em;
+    height: 30px;
+    width: 30px;
+}
+.attend{
+    background: rgb(29, 28, 28);
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    width: 30px;
+    height: 15px;
+    color: green;
+    margin-left: 5px;
+    transform: rotate(90deg);
+}
+.big-button{
+    width: 40px;
+    left: 42px;
+    border: 3px solid gainsboro;
+    position: absolute;
+    height: 35px;
+    top: 10px;
+    border-radius: 20%;
+    background: rgb(29, 28, 28);
+}
+.right-left{
+    position: absolute;
+    left: 100px;
+}
+.minus-2{
+    background: rgb(29, 28, 28);
+    border: none;
+    color: whitesmoke;
+    font-size: 2em;
+    height: 30px;
+    width: 30px;
+}
+.end{
+    background: rgb(29, 28, 28);
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    width: 30px;
+    height: 15px;
+    color: darkred;
+    margin-left: 5px;
+    transform: rotate(90deg);
+}
+.number-pad{
+    position: absolute;
+    top: 50px;
+    left: 5px;
+}
+
+button:focus {
+   outline: none;
+}
+.number-pad, button{
+    background: transparent;
+    border: 1px ;
+    color: whitesmoke;
+    font-size: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+.bottom-btn{
+    position: absolute;
+    left: 12px;
+}
+.one{
+    position: absolute;
+    left: -5px;
+}
+.two{
+    position: absolute;
+    left:45px;
+}
+.three{
+    position: absolute;
+    left:95px;
+}
+.four{
+    position: absolute;
+    left:-5px;
+    top: 30px;
+}
+.five{
+    position: absolute;
+    left:45px;
+    top: 30px;
+}
+.six{
+    position: absolute;
+    left:95px;
+    top: 30px;
+}
+.seven{
+    position: absolute;
+    left:-5px;
+    top: 55px;
+}
+.eight{
+    position: absolute;
+    left:45px;
+    top: 55px;
+}
+.nine{
+    position: absolute;
+    left:95px;
+    top: 55px;
+}
+.star{
+    position: absolute;
+    left:-15px;
+    top: 75px;
+}
+.zero{
+    position: absolute;
+    left:34px;
+    top: 75px;
+}
+.hash{
+    position: absolute;
+    left:82px;
+    top: 75px;
+}
+
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div>
+                <form action="{{ url_for('predict')}}" method="post" >
+                    <label style="color: white" fname>Enter the values</label>
+                    <input style="width: 90%" type="number" id="first" name="number" value="">
+                   <h5 style="color:black">{{ prediction_text }}<h5>
+                  </form>
+
+
+              </div>
+            
+<!-- partial -->
+  
+</body>
+</html>
