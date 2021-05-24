@@ -3,6 +3,7 @@ chardet==4.0.0
 click==8.0.1
 colorama==0.4.4
 Flask==2.0.1
+gunicorn==19.9.0
 gcloud==0.17.0
 googleapis-common-protos==1.53.0
 httplib2==0.19.1
