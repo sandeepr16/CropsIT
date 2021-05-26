@@ -131,7 +131,7 @@ def predict():
             ans = db.child("users").child(person["uid"]).child("dat").get()
             print(ans.val())
             account_sid = 'AC2749609bff78598eba194d52d5e517dd'
-            auth_token = 'be352b0c93e8f1cb1089201eac4107df'
+            auth_token = 'e80cd35cdf9ef191cd04b4237fd4f121'
             client = Client(account_sid, auth_token)
             data = db.child("users").get()
             ans = db.child("users").child("dat").get()
