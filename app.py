@@ -108,7 +108,7 @@ def predict():
             fv = np.array(fv).reshape((1, -1))
             prediction = model.predict(fv)
             crop = {'Maize': 1, 'Sugarcane': 2, 'Cotton': 3, 'Tobacco': 4, 'Paddy': 5, 'Barley': 6,
-                    'Wheat': 7, 'Millets': 8, 'Oil seeds': 9, 'Pulses': 10, 'Ground Nuts': 11}
+                    'Wheat': 7, 'Millets': 8, 'Oil seeds': 9, 'Pulses': 10, 'GroundNuts': 11}
             crop_name = list(crop.keys())[list(
                 crop.values()).index(prediction)]
             prediction1 = model2.predict(
