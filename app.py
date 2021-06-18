@@ -20,14 +20,14 @@ model = pickle.load(open('croptype1.sav', 'rb'))
 model2 = pickle.load(open('fertilizer1.sav', 'rb'))
 # Add your own details
 config = {
-    "apiKey": "AIzaSyChuFVERl1FnqV5XsnSj31bOCrDf3VcJ-c",
-    "authDomain": "zamin-61961.firebaseapp.com",
-    "databaseURL": "https://zamin-61961-default-rtdb.firebaseio.com/",
-    "storageBucket": "zamin-61961.appspot.com",
-    "projectId": "zamin-61961",
-    "messagingSenderId": "676194316386",
-    "appId": "1:676194316386:web:96c04b30fbcdea66dd213b",
-    "measurementId": "G-LGJ74Z3CH7"
+    "apiKey": "AIzaSyArgMlX6Bmor5u7R-kGhSXxhzwKNfMhjyY",
+    "authDomain": "cropsit-a801f.firebaseapp.com",
+    "databaseURL": "https://cropsit-a801f-default-rtdb.firebaseio.com/",
+    "projectId": "cropsit-a801f",
+    "storageBucket": "cropsit-a801f.appspot.com",
+    "messagingSenderId": "52828763751",
+    "appId": "1:52828763751:web:04fd7ff492d33fc89086c2",
+    "measurementId": "G-5PRN42LB3F"
 }
 
 # initialize firebase
